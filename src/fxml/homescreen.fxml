@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="221.0" prefWidth="269.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="event.Homescreen">
+   <children>
+      <Text layoutX="87.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Battleship">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="playAI" layoutX="86.0" layoutY="85.0" mnemonicParsing="false" onAction="#playAI" text="Play with AI" />
+      <Button fx:id="playHuman" layoutX="69.0" layoutY="141.0" mnemonicParsing="false" onAction="#playHuman" text="Play with Human" />
+   </children>
+</AnchorPane>
