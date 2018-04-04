@@ -18,7 +18,7 @@ public class Homescreen {
 	
 	public void playAI() {
 		Battleship game = new Battleship();
-		game.setState(1, 1, State.HIT);
+		//game.setState(1, 1, State.HIT);
 	}
 	
 	public void playHuman() {

@@ -12,11 +12,10 @@ public class Game implements Runnable {
 	
 	public void run() {
 		Phase phase = Phase.CREATE;
-		while(!phase.equals(Phase.END)) {
-			if(phase.equals(Phase.CREATE)) {
-				//System.out.println("Hi");
-			}
-		}
+		field.setStatusText("Click two horizontal or verticle spots to place a 5x5 ship");
+		/*while(phase.equals(Phase.CREATE)) {
+			
+		}*/
 	}
 	
 	public void start() {
