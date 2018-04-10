@@ -60,6 +60,5 @@ public abstract class NetworkConnection {
 				onReceiveCallback.accept("Connection closed");
 			}
 		}
-		
 	}
 }
