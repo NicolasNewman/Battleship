@@ -349,7 +349,7 @@ public class BattleshipHuman {
 						if(img instanceof ImageView) {
 							int[] cords = (int[])((ImageView) img).getUserData();
 							if(fieldStateTarget[cords[0]][cords[1]].equals(State.EMPTY)) {
-								((ImageView) img).setImage(new Image("res/tile_clicked.jpg"));
+								((ImageView) img).setImage(new Image(ImagePath.TILE_CLICKED.toText()));
 							}
 						}
 					}
@@ -381,7 +381,7 @@ public class BattleshipHuman {
 							if(fieldStateTarget[cords[0]][cords[1]].equals(State.SHIP)) {
 								fieldStateTarget[cords[0]][cords[1]] = State.SHIPHIT;
 								DEBUGPRINT("Setting tile to ship hit");
-								((ImageView) img).setImage(new Image("res/tile_ship_hit.jpg"));
+								((ImageView) img).setImage(new Image(ImagePath.TILE_SHIP_HIT.toText()));
 								tileHit++;
 								try {
 									connection.send("CLIENTHITTILE" + tileHit);
@@ -392,7 +392,7 @@ public class BattleshipHuman {
 							} else if(fieldStateTarget[cords[0]][cords[1]].equals(State.EMPTY)) {
 								fieldStateTarget[cords[0]][cords[1]] = State.EMPTYHIT;
 								DEBUGPRINT("Setting tile to empty hit");
-								((ImageView) img).setImage(new Image("res/tile_empty_hit.jpg"));
+								((ImageView) img).setImage(new Image(ImagePath.TILE_EMPTY_HIT.toText()));
 							}
 							
 							// If you are the server, tileHit is your count and otherTileHit is the clients count.
@@ -433,7 +433,7 @@ public class BattleshipHuman {
 						if(img instanceof ImageView) {
 							int[] cords = (int[])((ImageView) img).getUserData();
 							if (fieldStateTarget[cords[0]][cords[1]].equals(State.EMPTY) || fieldStateTarget[cords[0]][cords[1]].equals(State.SHIP)) {
-								((ImageView) img).setImage(new Image("res/tile_hover.jpg"));
+								((ImageView) img).setImage(new Image(ImagePath.TILE_HOVER.toText()));
 							}
 						}
 					}
@@ -446,7 +446,7 @@ public class BattleshipHuman {
 						if(img instanceof ImageView) {
 							int[] cords = (int[])((ImageView) img).getUserData();
 							if (fieldStateTarget[cords[0]][cords[1]].equals(State.EMPTY) || fieldStateTarget[cords[0]][cords[1]].equals(State.SHIP)) {
-								((ImageView) img).setImage(new Image("res/tile_empty.jpg"));
+								((ImageView) img).setImage(new Image(ImagePath.TILE_EMPTY.toText()));
 							}
 						}
 					}

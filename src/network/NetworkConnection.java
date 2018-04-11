@@ -7,6 +7,11 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.function.Consumer;
 
+/**
+ * This class was created by the author below with slight modifications made.
+ * @author Almas Baimagambetov
+ *
+ */
 public abstract class NetworkConnection {
 	
 	private ConnectionThread connThread = new ConnectionThread();

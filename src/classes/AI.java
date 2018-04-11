@@ -84,6 +84,13 @@ public class AI {
 							boolean[] valid = hitEmpty(x, y, -1*lowerCheck, 0);
 							// Increment the factor to check the next square
 							lowerCheck++;
+							
+							if(lowerCheck > 20) {
+								DEBUGPRINT("Stuck in loop. Assuming bounds found");
+								hitLowerBounds = true;
+								break;
+							}
+							
 							if(valid[0] == true) {
 								DEBUGPRINT("Found lower bounds");
 								hitLowerBounds = true;
@@ -95,6 +102,7 @@ public class AI {
 							} else {
 								break; //TODO: lost move
 							}
+							
 						}
 					// If the upper region of the ship has not been found, run this
 					} else if(!hitUpperBounds) {
@@ -102,6 +110,13 @@ public class AI {
 						while(true) {
 							boolean[] valid = hitEmpty(x, y, 1*upperCheck, 0);
 							upperCheck++;
+							
+							if(upperCheck > 20) {
+								DEBUGPRINT("Stuck in loop. Assuming bounds found");
+								hitUpperBounds = true;
+								break;
+							}
+							
 							if(valid[0] == true) {
 								DEBUGPRINT("Found upper bounds");
 								hitUpperBounds = true;
@@ -145,6 +160,13 @@ public class AI {
 							boolean[] valid = hitEmpty(x, y, 0, -1*lowerCheck);
 							// Increment the factor to check the next square
 							lowerCheck++;
+							
+							if(lowerCheck > 20) {
+								DEBUGPRINT("Stuck in loop. Assuming bounds found");
+								hitLowerBounds = true;
+								break;
+							}
+							
 							if(valid[0] == true) {
 								DEBUGPRINT("Found lower bounds");
 								hitLowerBounds = true;
@@ -163,6 +185,13 @@ public class AI {
 						while(true) {
 							boolean[] valid = hitEmpty(x, y, 0, 1*upperCheck);
 							upperCheck++;
+							
+							if(upperCheck > 20) {
+								DEBUGPRINT("Stuck in loop. Assuming bounds found");
+								hitUpperBounds = true;
+								break;
+							}
+							
 							if(valid[0] == true) {
 								DEBUGPRINT("Found upper bounds");
 								hitUpperBounds = true;

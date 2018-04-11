@@ -3,6 +3,11 @@ package network;
 import java.io.Serializable;
 import java.util.function.Consumer;
 
+/**
+ * This class was created by the author below.
+ * @author Almas Baimagambetov
+ *
+ */
 public class Server extends NetworkConnection {
 
 	private int port;
